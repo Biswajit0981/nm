@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Wish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="birthday-shell">
+      <section class="hero" aria-label="Birthday wish">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+
+        <nav class="topbar" aria-label="Birthday controls">
+          <span class="brand">Birthday Moment</span>
+          <button class="icon-button" id="sparkButton" type="button" aria-label="Launch birthday sparkles">
+            <span aria-hidden="true">*</span>
+          </button>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="copy-block">
+            <p class="eyebrow">A little celebration, made with love</p>
+            <h1>Happy Birthday, <span id="personName">Namrata</span></h1>
+            <p class="hero-copy">
+              May your day feel bright, effortless, and full of small moments that stay with you.
+              Here is a warm wish for new memories, better dreams, and every reason to smile.
+            </p>
+            <div class="actions">
+              <button class="primary-button" id="wishButton" type="button">
+                <span>Open Wish</span>
+              </button>
+              <a class="ghost-link" href="#memories" data-scroll-to>View Photos</a>
+            </div>
+          </div>
+
+          <div class="cake-stage" aria-label="Animated birthday cake">
+            <div class="spark-field" id="sparkField" aria-hidden="true"></div>
+            <div class="cake-card">
+              <div class="candle">
+                <div class="flame"></div>
+                <div class="wick"></div>
+              </div>
+              <div class="cake-top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="cake-layer layer-one"></div>
+              <div class="cake-layer layer-two"></div>
+              <div class="plate"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wish-panel" id="wishPanel" aria-live="polite">
+        <div>
+          <p class="panel-kicker">Today is yours</p>
+          <h2 id="wishTitle">Wishing you joy in every chapter</h2>
+        </div>
+        <p id="wishText">
+          May this birthday bring fresh energy, clear dreams, good people, and countless little wins.
+          Keep glowing in your own way.
+        </p>
+      </section>
+
+      <section class="memory-section" id="memories" aria-label="Birthday photo memories">
+        <div class="section-heading">
+          <p class="panel-kicker">Memory scroll</p>
+          <h2>Birthday Photo Wall</h2>
+        </div>
+
+        <div class="memory-layout">
+          <aside class="memory-copy">
+            <span class="memory-count" id="memoryCount">00</span>
+            <h3>Moments that make the wish personal</h3>
+            <p>
+              Scroll through a soft gallery built for birthday portraits, party moments, and favorite memories.
+            </p>
+            <div class="memory-controls" aria-label="Photo gallery controls">
+              <button class="circle-control" id="prevPhoto" type="button" aria-label="Previous photo">&lt;</button>
+              <button class="circle-control" id="nextPhoto" type="button" aria-label="Next photo">&gt;</button>
+            </div>
+          </aside>
+
+          <div class="photo-rail" id="photoRail"></div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>Copyright 2026 Roni. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/bundled/lenis.min.js"></script>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
